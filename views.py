@@ -20,5 +20,5 @@ def contact():
     return render_template('contact.html')
 
 @views.route("/booking")
-def contact():
+def booking():
     return render_template('book.html')

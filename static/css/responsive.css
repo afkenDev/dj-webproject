@@ -1,0 +1,77 @@
+/* Allgemeine Responsive-Einstellungen */
+body {
+    font-size: 16px; /* Standard-Schriftgröße */
+}
+
+/* Navbar: Anpassung für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        margin: 10px 0; /* Mehr Abstand zwischen Links */
+    }
+}
+
+/* Hero Section: Skalierung für kleine Bildschirme */
+@media (max-width: 768px) {
+    #home {
+        height: 60vh; /* Kleinere Höhe für Mobilgeräte */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Kleinere Schriftgröße */
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        padding: 10px 20px; /* Kleinere Buttons */
+    }
+}
+
+/* Footer: Textzentrierung und kleinere Schrift */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Kleinere Schriftgröße */
+    }
+
+    .social-icons a {
+        font-size: 1.2rem; /* Kleinere Icons */
+    }
+}
+
+/* Tablet: Anpassungen für mittlere Bildschirme */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-btn {
+        padding: 12px 25px;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
