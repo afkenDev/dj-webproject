@@ -1,0 +1,120 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000; /* Schwarzer Hintergrund */
+    color: #FFFBFC; /* Helles Weiß für Text */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #fff; /* Weißer Hintergrund */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    padding: 15px 0;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    margin: 0 15px;
+    font-weight: 500;
+    color: #333; /* Dunkelgrau */
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Blau beim Hover */
+}
+
+.nav-item .dropdown-menu {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Kontakt Button Styling */
+.btn-primary {
+    background-color: #004d40; /* Dunkelgrün */
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 50px; /* Abgerundete Ecken */
+}
+
+.btn-primary:hover {
+    background-color: #00695c; /* Helleres Grün beim Hover */
+}
+
+/* Hero Section */
+#home {
+    background: url('https://static.vecteezy.com/system/resources/thumbnails/042/660/319/small_2x/ai-generated-pic-city-park-bench-offers-a-peaceful-oasis-amidst-urban-hustle-photo.jpg') no-repeat center center/cover;
+    height: 100vh;
+}
+
+.hero-content {
+    text-align: center;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    background: rgba(34, 56, 78, 0.8); /* Dunkles Blau mit Transparenz */
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    color: #D6BA3B; /* Gold für Überschriften */
+    font-size: 2.5rem;
+}
+
+.hero-content p {
+    color: #C9C0C0; /* Zartes Grau für Untertitel */
+}
+
+.hero-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #22384E, #D6BA3B);
+    border: none;
+    color: #FFFBFC;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #D6BA3B;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #000;
+    text-align: center;
+}
+
+footer p {
+    color: #FFFBFC;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #FFFBFC;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #D6BA3B;
+}
