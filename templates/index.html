@@ -42,12 +42,12 @@
                 <!-- Navigation Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/events">Events</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/contact">Kontakt</a></li>
                     </ul>
-                    <a href="/booking" class="btn btn-primary">Buchen!</a>
+                    <a class="nav-link" href="{{ url_for('views.home') }}">Home</a>
+                    <a class="nav-link" href="{{ url_for('views.events') }}">Events</a>
+                    <a class="nav-link" href="{{ url_for('views.about') }}">About</a>
+                    <a class="nav-link" href="{{ url_for('views.contact') }}">Kontakt</a>
+                    <a href="{{ url_for('views.booking') }}" class="btn btn-primary">Buchen!</a>                    
                 </div>
             </div>
         </nav>

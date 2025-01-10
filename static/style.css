@@ -28,7 +28,7 @@ body {
 }
 
 .nav-link {
-    margin: 0 15px;
+    margin: 0 20px;
     font-weight: 500;
     color: #333; /* Dunkelgrau */
     transition: color 0.3s ease-in-out;
@@ -46,15 +46,16 @@ body {
 
 /* Kontakt Button Styling */
 .btn-primary {
-    background-color: #004d40; /* Dunkelgrün */
+    background-color: #C9C0C0; /* grau */
     border: none;
-    padding: 10px 20px;
+    padding: 10px 16px;
     font-weight: bold;
-    border-radius: 50px; /* Abgerundete Ecken */
+    margin-left: 16px;
+    border-radius: 100px; /* Abgerundete Ecken */
 }
 
 .btn-primary:hover {
-    background-color: #00695c; /* Helleres Grün beim Hover */
+    background-color: #D6BA3B; /* Helleres Grün beim Hover */
 }
 
 /* Hero Section */
