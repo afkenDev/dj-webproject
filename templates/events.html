@@ -1,27 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - RayKen Events DJ Schweiz</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RayKen Events DJ Schweiz | Jetzt Termin buchen!</title>
+    <meta
+      name="description"
+      content="The official homepage of DJ Afrit - Your favorite music mixes and events."
+    />
+
+    <!-- Slider stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap core css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts style -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Custom styles for this template -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <!-- Responsive style -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/responsive.css') }}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section -->
     <header>
-        <nav class="navbar">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/events">Events</a>
-            <a href="/book">Book</a>
-            <a href="/contact">Contact</a>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="{{ url_for('views.home') }}">
+            <img
+              src="{{ url_for('static', filename='content/LOGO.png') }}"
+              alt="DJ Afrit Logo"
+            />
+          </a>
+
+          <!-- Toggle button for mobile view -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"></ul>
+            <a class="nav-link" href="{{ url_for('views.home') }}">Home</a>
+            <a class="nav-link" href="{{ url_for('views.events') }}"
+              >Referenzen</a
+            >
+            <a class="nav-link" href="{{ url_for('views.about') }}">About</a>
+            <a class="nav-link" href="{{ url_for('views.contact') }}"
+              >Kontakt</a
+            >
+            <a href="{{ url_for('views.booking') }}" class="btn btn-primary"
+              >Buchen</a
+            >
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <h1>Referenzen</h1>
-        <p>Unsere vorherigen Events</p>
+        <section id="referenzen">
+            <div class="hero-content">
+                <h1 class="cinzel-header">Unsere Referenzen</h1>
+                <p>Hier sind einige Rückmeldungen von unseren vergangenen Events.</p>
+            </div>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <blockquote>
+                        <p>„Ich möchte Euch 2 noch danken, ihr seid sicherlich daran beteiligt gewesen, unser Fest zu einem Erfolg zu machen. Die Musikauswahl ist sehr gut angekommen. Nochmals vielen Dank und ich werde gern das nächste Mal wieder auf Euch zukommen.“</p>
+                        <footer>- Bianca</footer>
+                    </blockquote>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        <p>„Wir können unsere Zufriedenheit nur wiederholen; wirklich Top! Alle waren mit der Musik sehr zufrieden, und hoffentlich haben auch Sie ein bisschen Spass damit gehabt. Es tut mir leid, dass wir Ihnen zum 'bitteren Schluss' gezwungen haben, aber die Leute waren einfach nicht zu stoppen. Wir hoffen, dass Sie in der Zukunft viel Erfolg haben werden :)“</p>
+                        <footer>- Lisa & Raimon</footer>
+                    </blockquote>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        <p>„Super Equipment, mit den ganzen Lichtereffekt hat das echt mega stimmigsvoll ausgesehen. Musikmässig wurde super auf unsere Wünsche eingegangen und die Gäste konnten sich Lieder wünschen, was sehr gut angekommen ist. Freundliches und professionelles DJ-Duo, dass wenig bis keine Anweisungen braucht, und somit den Trauzeugen Arbeit erspart.“</p>
+                        <footer>- Andreas</footer>
+                    </blockquote>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        <p>„Herzlichen Dank nochmals für euren Einsatz und die tolle Musik, die Ihr gespielt habt. Wir haben auch von den Leuten sehr positives Feedback erhalten und würden euch jederzeit wieder buchen.“</p>
+                        <footer>- Mike & Ingrid</footer>
+                    </blockquote>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        <p>„Grossen Dank an Beiden für Ihre grossartige Leistung Samstag vor einer Woche. Die Hochzeit war ein grosser Erfolg, nicht zuletzt musikalisch, alles hat wirklich bestens geklappt. Also, noch ein Mal Danke für die gute Zusammenarbeit und bis zum nächsten Mal!“</p>
+                        <footer>- Carl</footer>
+                    </blockquote>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        <p>„Wir wollten uns schon lange für Deinen Einsatz bei unserer Hochzeit bedanken! War echt cool, hast unsere Musikwünsche auf den Punkt ausgefüllt und haben auch sehr positives Feedback bekommen!!“</p>
+                        <footer>- Liana & Danijel</footer>
+                    </blockquote>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        <p>„Nochmals vielen Dank für die tolle Musik die Ihr an meinem 40er gespielt habt! Hätte nicht besser sein können!!! Besonders toll, wie Ihr 'funky' Klassiker mit House-Rhythmus unterlegt habt. Ich bekam nur die besten Feedbacks von meinen Gästen. Danke für den tollen Abend!“</p>
+                        <footer>- Jörg</footer>
+                    </blockquote>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        <p>„Ich möchte mich im Namen der Log OS 2/13 für den fantastischen Abend bei Ihnen bedanken. Laut dem Bellevue Management waren noch nicht so viele Offiziere auf der Tanzfläche. Besten Dank für Alles.“</p>
+                        <footer>- T. Juch</footer>
+                    </blockquote>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        <p>„Wir fanden dass es super und reibungslos geklappt hat. Kompliment! Auch von den Gästen gab es sehr positive Kommentare von denen du hoffentlich den einen oder anderen direkt erhalten hast. Ich war erstaunt und erfreut wie lange die Leute getanzt haben, echt cool.“</p>
+                        <footer>- Monika & Besnik</footer>
+                    </blockquote>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        <p>„Schön zu hören, dass Euch die Zusammenarbeit ebenfalls so gut gefallen hat wie uns! Wir können uns gut vorstellen, in der kommenden Wintersaison wieder mit Euch zusammenarbeiten. Ich freue mich von Euch zu hören.“</p>
+                        <footer>- Kai</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2024 DJ Afrit. All rights reserved.</p>
-    </footer>
+   <!-- Footer -->
+   <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 RayKen Events. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#" class="text-white mx-2"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white mx-2"
+        ><i class="fab fa-soundcloud"></i
+      ></a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <script
+    src="{{ url_for('static', filename='script.js') }}"
+    async
+    defer
+  ></script>
 </body>
 </html>

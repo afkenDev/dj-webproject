@@ -3,7 +3,10 @@ from views import views
 
 app = Flask(__name__)
 app.register_blueprint(views, url_prefix="/")
+app.secret_key = 'dein_geheimer_schlüssel_hier'
 
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+

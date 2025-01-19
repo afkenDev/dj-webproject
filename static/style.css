@@ -5,10 +5,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    --background-color: #000000;
+    --primary-color: #D6BA3B;
+    --secondary-color: #FFFBFC;
+    --accent-color: #C9C0C0;
+    --text-color-dark: #333;
+    --text-color-light: #fff;
+    --font-family-main: 'Montserrat', sans-serif;
+    --font-family-header: 'Cinzel', serif;
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000000; /* Schwarzer Hintergrund */
-    color: #FFFBFC; /* Weiß für Text */
+    font-family: var(--font-family-main);
+    background-color: var(--background-color);
+    color: var(--secondary-color);
 }
 
 /* Fonts Styling */
@@ -28,25 +39,22 @@ body {
     font-style: normal;
 }
 
-
 .cinzel-header {
-    font-family: "Cinzel", serif;
+    font-family: var(--font-family-header);
     font-optical-sizing: auto;
-    font-weight: 600; /* Adjust the weight as needed */
+    font-weight: 600;
     font-style: normal;
-  }
-  
-
+}
 
 /* Navbar Styling */
 .navbar {
-    background-color: #fff; /* Weißer Hintergrund */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
-    padding: 15px 0;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
 }
 
 .navbar-brand img {
-    max-height: 2.75em;
+    max-height: 3.2em;
 }
 
 .navbar-nav {
@@ -57,12 +65,12 @@ body {
 .nav-link {
     margin: 0 20px;
     font-weight: 500;
-    color: #333; /* Dunkelgrau */
+    color: var(--text-color-dark);
     transition: color 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-    color: #D6BA3B; /* Blau beim Hover */
+    color: var(--primary-color);
 }
 
 .nav-item .dropdown-menu {
@@ -73,17 +81,18 @@ body {
 
 /* Kontakt Button Styling */
 .btn-primary {
-    background-color: #C9C0C0; /* grau */
+    background-color: var(--accent-color);
     color: rgba(0, 0, 0, 0.785);
     border: none;
     padding: 10px 16px;
     font-weight: bold;
     margin-left: 16px;
-    border-radius: 100px; /* Abgerundete Ecken */
+    border-radius: 100px;
 }
 
 .btn-primary:hover {
-    background-color: #D6BA3B; /* Helleres Grün beim Hover */
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
 }
 
 /* Hero Section */
@@ -99,26 +108,20 @@ body {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     background-image: url('https://static.vecteezy.com/system/resources/thumbnails/011/887/512/small/halftone-dotted-background-free-png.png');
-    
     background-blend-mode: overlay;
-
-    /* Anpassungen für die Bildwiederholung */
-    background-repeat: no-repeat; 
-    background-repeat: repeat; 
-    background-size: 25% auto; /
+    background-repeat: no-repeat;
+    background-size: 25% auto;
 }
 
 .hero-content h1 {
-    color: #FFFFFF;
+    color: var(--text-color-light);
     font-size: 2.6rem;
     letter-spacing: 0.3rem;
-    font-family: 'PorschaC', 'Cinzel', Arial, Helvetica, sans-serif;
-
+    font-family: 'PorschaC', var(--font-family-header), Arial, Helvetica, sans-serif;
 }
 
-
 .hero-content p {
-    color: #C9C0C0;
+    color: var(--accent-color);
     font-size: 1.5rem;
 }
 
@@ -127,152 +130,356 @@ body {
     padding: 12px 30px;
     background-color: #22384E;
     border: none;
-    color: #FFFBFC;
+    color: var(--secondary-color);
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     cursor: pointer;
-    will-change: transform, box-shadow;
-    backface-visibility: hidden;
 }
 
 .hero-btn:hover {
-    background-color: #D6BA3B; /* Lighter shade for contrast */
+    background-color: var(--primary-color);
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(214, 186, 59, 0.8);
 }
 
 .hero-btn:active {
     transform: translateY(2px);
-    box-shadow: 0 0 10px #D6BA3B;
+    box-shadow: 0 0 10px var(--primary-color);
 }
 
 .hero-btn:focus {
-    outline: 2px solid #D6BA3B;
+    outline: 2px solid var(--primary-color);
     outline-offset: 3px;
 }
 
 /* Leistungen */
-#about {
-    padding: 60px 0;
+
+
+/* Section Background */
+#products {
+    background-color: var(--background-color);
+    padding: 50px 0;
 }
 
-.about-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.about-description {
-    font-size: 1.2rem;
-    color: #555;
-}
-
+/* Product Cards */
 .product-card {
-    background-color: #fff;
+    background-color: var(--secondary-color);
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 30px;
-    position: relative;
     padding: 20px;
     text-align: center;
+    position: relative;
+    font-family: var(--font-family-main);
 }
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Product Image */
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Product Title */
 .product-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-color-dark);
     margin: 15px 0;
+    font-family: var(--font-family-header);
+    letter-spacing: 0.5px;
 }
 
+/* Product Price */
 .product-price {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #ff5733;
+    color: var(--primary-color);
+    margin-bottom: 15px;
 }
 
-.product-details {
-    display: none;
-    margin-top: 15px;
+/* Product Description */
+.product-card p {
     font-size: 1rem;
-    color: #555;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-.product-details.visible {
+/* Button Styles */
+.btn-primary-2 {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-family-main);
+}
+
+.btn-primary-2:hover {
+    background-color: #c0a333;
+    text-decoration: none;
+}
+
+/* Section Header */
+.cinzel-header {
+    font-family: var(--font-family-header);
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-align: center;
+    position: relative;
+}
+
+.cinzel-header:after {
+    content: "";
     display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0 auto;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-card {
+        padding: 15px;
+    }
 
+    .product-title {
+        font-size: 1.6rem;
+    }
 
-.product-item {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
+    .product-price {
+        font-size: 1.3rem;
+    }
 
-.product-item.visible {
-    opacity: 1;
-    transform: translateY(0);
+    .btn-primary {
+        padding: 8px 16px;
+    }
 }
 
 /* Footer */
 footer {
     padding: 20px;
-    background: #22384E; /* Dunkles Blau */
+    background: #22384E;
     text-align: center;
 }
 
 footer p {
-    color: #FFFBFC; /* Weißer Text */
+    color: var(--secondary-color);
 }
 
 .social-icons a {
     font-size: 1.5rem;
-    color: #FFFBFC; /* Weiß */
+    color: var(--secondary-color);
     transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #D6BA3B; /* Gold beim Hover */
+    color: var(--primary-color);
 }
 
 /* Events */
-
 #events {
-    background-color: #000; /* Fallback color */
+    background-color: var(--background-color);
     background-image: url('https://mysensesbar.ch/images/mysense/gallery/4.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .event-card {
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
-    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--text-color-light);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.event-card:hover {
-    transform: translateY(-5px);
 }
 
 h2 {
     font-weight: bold;
     font-size: 2rem;
+    color: white; /* Weißer Text für besseren Kontrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Schattierung für bessere Sichtbarkeit auf bunten Hintergründen */
+    margin-bottom: 20px; /* Etwas Abstand nach unten */
+
 }
 
 h4 {
     font-weight: bold;
     font-size: 1.5rem;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    display: block; /* Pfeil wird standardmäßig angezeigt */
+    opacity: 1; /* Standard: voll sichtbar */
+    transition: opacity 0.5s ease; /* Übergang bei Opazitätsänderung */
+  }
+  
+  .scroll-down a {
+    text-decoration: none;
+    color: inherit;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    40% {
+      transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+      transform: translateX(-50%) translateY(-5px);
+    }
+  }
+  
+
+ /* Testimonials Section */
+#referenzen {
+    background-color: var(--background-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.testimonial {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.testimonial footer {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+/* Focus on Text */
+.testimonial blockquote {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-color-dark);
+}
+
+.testimonial footer {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: var(--primary-color);
+    margin-top: 10px;
+    opacity: 0.7; /* Subtle effect for the name */
+}
+
+/* Main Content */
+#about {
+    padding-top: 40px;
+  }
+  
+  #about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  #about-description, #music-description, #equipment-description, #why-rayken-description, #pricing-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  #djs {
+    margin-top: 40px;
+  }
+  
+  .dj-card {
+    margin-bottom: 30px;
+  }
+  
+  .dj-name {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dj-description {
+    font-size: 1rem;
+    color: #666;
+  }

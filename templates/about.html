@@ -1,27 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - RayKen Events DJ Schweiz</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RayKen Events DJ Schweiz | Jetzt Termin buchen!</title>
+    <meta
+      name="description"
+      content="The official homepage of DJ Afrit - Your favorite music mixes and events."
+    />
+
+    <!-- Slider stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap core css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts style -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Custom styles for this template -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <!-- Responsive style -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/responsive.css') }}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section -->
     <header>
-        <nav class="navbar">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/events">Events</a>
-            <a href="/music">Music</a>
-            <a href="/contact">Contact</a>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="{{ url_for('views.home') }}">
+            <img
+              src="{{ url_for('static', filename='content/LOGO.png') }}"
+              alt="DJ Afrit Logo"
+            />
+          </a>
+
+          <!-- Toggle button for mobile view -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"></ul>
+            <a class="nav-link" href="{{ url_for('views.home') }}">Home</a>
+            <a class="nav-link" href="{{ url_for('views.events') }}"
+              >Referenzen</a
+            >
+            <a class="nav-link" href="{{ url_for('views.about') }}">About</a>
+            <a class="nav-link" href="{{ url_for('views.contact') }}"
+              >Kontakt</a
+            >
+            <a href="{{ url_for('views.booking') }}" class="btn btn-primary"
+              >Buchen</a
+            >
+          </div>
+        </div>
+      </nav>
     </header>
-    <main>
-        <h1>About Me</h1>
-        <p>Information über DJ Afrit und seine Geschichte.</p>
+
+    <main class="container py-5" id="about">
+      <h1 class="cinzel-header text-center" id="about-title">Über uns</h1>
+      <p id="about-description">Willkommen bei RayKen Events! Wir bieten Ihnen DJs der Spitzenklasse, die Ihre Veranstaltung zu einem unvergesslichen Erlebnis machen werden. Mit über 20 Jahren Erfahrung im DJing sowie in der Event-Organisation sind wir der ideale Partner, um Ihre Feier musikalisch zu begleiten.</p>
+      
+      <h2 class="cinzel-header" id="djs-title">Unsere DJs</h2>
+      <div class="row" id="djs">
+        <div class="col-md-6 dj-card">
+          <img src="https://static.wixstatic.com/media/05166d_1f9c76f3bfc84d36ae9fb5adb3ca1fb7~mv2_d_1335_2000_s_2.jpg/v1/fill/w_549,h_664,al_t,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/05166d_1f9c76f3bfc84d36ae9fb5adb3ca1fb7~mv2_d_1335_2000_s_2.jpg" alt="DJ Afrit" class="img-fluid rounded dj-image">
+          <h3 class="dj-name">DJ Afrit</h3>
+          <p class="dj-description">DJ Afrit, ein Profi mit über 20 Jahren Erfahrung in der Schweiz und international. Er sorgt dafür, dass Sie die besten musikalischen Momente erleben und immer wieder neu entdecken.</p>
+        </div>
+        <div class="col-md-6 dj-card">
+          <img src="https://static.wixstatic.com/media/05166d_b06e3be036d84a829a545ea130469d2b~mv2_d_1335_2000_s_2.jpg/v1/fill/w_549,h_633,al_t,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/05166d_b06e3be036d84a829a545ea130469d2b~mv2_d_1335_2000_s_2.jpg" alt="DJ Shaker" class="img-fluid rounded dj-image">
+          <h3 class="dj-name">DJ Shaker</h3>
+          <p class="dj-description">DJ Shaker ist bekannt für seine Fähigkeit, das Publikum zu begeistern und die Stimmung immer im Fokus zu behalten. Mit umfangreicher Erfahrung in der Club- und Eventszene sorgt er dafür, dass Ihre Veranstaltung zum Highlight wird.</p>
+        </div>
+      </div>
+
+      <h2 class="cinzel-header mt-5" id="music-equipment-title">Unsere Musik & Equipment</h2>
+      <p id="music-description">Mit einem Musik-Repertoire von über 100.000 Titeln sind wir in der Lage, jede Veranstaltung musikalisch zu begleiten. Egal, welche Musikrichtung oder welche speziellen Wünsche Sie haben, wir passen uns flexibel an und garantieren ein unvergessliches Erlebnis.</p>
+      <p id="equipment-description">Unser Equipment besteht aus erstklassigen Marken, die Ihnen kristallklaren Klang und beeindruckende Lichteffekte bieten, die jeden Raum zum Leben erwecken.</p>
+
+      <h2 class="cinzel-header mt-5" id="why-rayken-title">Warum RayKen Events?</h2>
+      <p id="why-rayken-description">Wir bieten Ihnen nicht nur herausragende DJs, sondern auch eine professionelle Event-Organisation. Unser Ziel ist es, Ihr Event zu einem einzigartigen Erlebnis zu machen. Vertrauen Sie auf unsere langjährige Erfahrung und lassen Sie sich von unserer Leidenschaft für Musik und Events begeistern.</p>
+      <p id="pricing-description">Verlangen Sie eine individuelle Offerte oder erfahren Sie mehr über unsere transparente Preisstruktur, die Ihnen eine einfache und faire Preisgestaltung bietet.</p>
     </main>
-    <footer>
-        <p>&copy; 2024 DJ Afrit. All rights reserved.</p>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3" id="footer">
+      <p>&copy; 2025 RayKen Events. Alle Rechte vorbehalten.</p>
+      <div class="social-icons" id="social-icons">
+        <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-soundcloud"></i></a>
+      </div>
     </footer>
-</body>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}" async defer></script>
+  </body>
 </html>

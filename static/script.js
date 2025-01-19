@@ -25,6 +25,23 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('visible');
         }
     });
-}, { threshold: 0.5 });
+}, { threshold: 0.3 });
 
 productItems.forEach(item => observer.observe(item));
+
+function scrollToNextSection() {
+    const nextSection = document.querySelector('#products');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
+  document.addEventListener("scroll", function () {
+    const scrollDown = document.getElementById("scroll-down");
+    if (window.scrollY === 0) {
+      scrollDown.style.opacity = "1"; // Voll sichtbar
+    } else {
+      scrollDown.style.opacity = "0"; // Langsam ausblenden
+    }
+  });
+  

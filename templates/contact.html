@@ -1,27 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - RayKen Events DJ Schweiz</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RayKen Events DJ Schweiz | Jetzt Termin buchen!</title>
+    <meta
+      name="description"
+      content="The official homepage of DJ Afrit - Your favorite music mixes and events."
+    />
+
+    <!-- Slider stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap core css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts style -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Custom styles for this template -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <!-- Responsive style -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/responsive.css') }}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section -->
     <header>
-        <nav class="navbar">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/events">Events</a>
-            <a href="/book">Book</a>
-            <a href="/contact">Contact</a>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="{{ url_for('views.home') }}">
+            <img
+              src="{{ url_for('static', filename='content/LOGO.png') }}"
+              alt="DJ Afrit Logo"
+            />
+          </a>
+
+          <!-- Toggle button for mobile view -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"></ul>
+            <a class="nav-link" href="{{ url_for('views.home') }}">Home</a>
+            <a class="nav-link" href="{{ url_for('views.events') }}"
+              >Referenzen</a
+            >
+            <a class="nav-link" href="{{ url_for('views.about') }}">About</a>
+            <a class="nav-link" href="{{ url_for('views.contact') }}"
+              >Kontakt</a
+            >
+            <a href="{{ url_for('views.booking') }}" class="btn btn-primary"
+              >Buchen</a
+            >
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <h1>Kontakt</h1>
-        <p>Kontaktiere uns hier für einen Auftrag!</p>
+
+              <section id="contact">
+                <div class="container py-5">
+                  <h2 class="cinzel-header text-center">Kontaktieren Sie uns</h2>
+                  <p class="text-center">Füllen Sie das Formular aus, und wir melden uns bei Ihnen!</p>
+              
+                  <form action="{{ url_for('views.contact') }}" method="POST">
+                    <div class="row">
+                      <!-- Name / Firma -->
+                      <div class="col-md-6">
+                        <label for="name" class="form-label">Name / Firma</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                      </div>
+              
+                      <!-- Telefonnummer -->
+                      <div class="col-md-6">
+                        <label for="phone" class="form-label">Telefonnummer</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required>
+                      </div>
+                    </div>
+              
+                    <div class="row mt-3">
+                      <!-- E-Mail -->
+                      <div class="col-md-6">
+                        <label for="email" class="form-label">E-Mail</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                      </div>
+              
+                      <!-- Art des Events -->
+                      <div class="col-md-6">
+                        <label for="event_type" class="form-label">Art des Events</label>
+                        <input type="text" id="event_type" name="event_type" class="form-control" required>
+                      </div>
+                    </div>
+              
+                    <div class="row mt-3">
+                      <!-- Ort des Events -->
+                      <div class="col-md-6">
+                        <label for="event_location" class="form-label">Ort des Events</label>
+                        <input type="text" id="event_location" name="event_location" class="form-control" required>
+                      </div>
+              
+                      <!-- Anzahl Gäste -->
+                      <div class="col-md-6">
+                        <label for="guest_count" class="form-label">Anzahl Gäste</label>
+                        <input type="number" id="guest_count" name="guest_count" class="form-control" required>
+                      </div>
+                    </div>
+              
+                    <div class="row mt-3">
+                      <!-- Gewünschte Dienstleistung -->
+                      <div class="col-md-12">
+                        <label for="desired_service" class="form-label">Gewünschte Dienstleistung</label>
+                        <textarea id="desired_service" name="desired_service" class="form-control" rows="4" required></textarea>
+                      </div>
+                    </div>
+              
+                    <div class="row mt-3">
+                      <!-- Datum des Events -->
+                      <div class="col-md-6">
+                        <label for="event_date" class="form-label">Datum des Events</label>
+                        <input type="date" id="event_date" name="event_date" class="form-control" required>
+                      </div>
+              
+                      <!-- Mitteilung -->
+                      <div class="col-md-6">
+                        <label for="message" class="form-label">Mitteilung</label>
+                        <textarea id="message" name="message" class="form-control" rows="4"></textarea>
+                      </div>
+                    </div>
+              
+                    <div class="row mt-4">
+                      <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">Absenden</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+                        
     </main>
-    <footer>
-        <p>&copy; 2024 DJ Afrit. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 RayKen Events. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#" class="text-white mx-2"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white mx-2"
+        ><i class="fab fa-soundcloud"></i
+      ></a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <script
+    src="{{ url_for('static', filename='script.js') }}"
+    async
+    defer
+  ></script>
 </body>
 </html>
