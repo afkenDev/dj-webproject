@@ -95,16 +95,22 @@ body {
 .hero-content {
     text-align: center;
     backdrop-filter: blur(10px);
-    padding: 30px;
+    padding: 45px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     background-image: url('https://static.vecteezy.com/system/resources/thumbnails/011/887/512/small/halftone-dotted-background-free-png.png');
+    
     background-blend-mode: overlay;
+
+    /* Anpassungen für die Bildwiederholung */
+    background-repeat: no-repeat; 
+    background-repeat: repeat; 
+    background-size: 25% auto; /
 }
 
 .hero-content h1 {
     color: #FFFFFF;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     letter-spacing: 0.3rem;
     font-family: 'PorschaC', 'Cinzel', Arial, Helvetica, sans-serif;
 
@@ -113,6 +119,7 @@ body {
 
 .hero-content p {
     color: #C9C0C0;
+    font-size: 1.5rem;
 }
 
 .hero-btn {
@@ -236,4 +243,36 @@ footer p {
 
 .social-icons a:hover {
     color: #D6BA3B; /* Gold beim Hover */
+}
+
+/* Events */
+
+#events {
+    background-color: #000; /* Fallback color */
+    background-image: url('https://mysensesbar.ch/images/mysense/gallery/4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.event-card {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 1.5rem;
 }

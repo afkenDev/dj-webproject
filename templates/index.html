@@ -1,174 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RayKen Events DJ Schweiz | Jetzt Termin buchen!</title>
-    <meta name="description" content="The official homepage of DJ Afrit - Your favorite music mixes and events.">
+    <meta
+      name="description"
+      content="The official homepage of DJ Afrit - Your favorite music mixes and events."
+    />
 
     <!-- Slider stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap core css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Fonts style -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
 
     <!-- Responsive style -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/responsive.css') }}"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- Header Section -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand" href="{{ url_for('views.home') }}">
-                    <img src="{{ url_for('static', filename='content/LOGO.png') }}" alt="DJ Afrit Logo">
-                </a>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="{{ url_for('views.home') }}">
+            <img
+              src="{{ url_for('static', filename='content/LOGO.png') }}"
+              alt="DJ Afrit Logo"
+            />
+          </a>
 
-                <!-- Toggle button for mobile view -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+          <!-- Toggle button for mobile view -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                <!-- Navigation Links -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                    </ul>
-                    <a class="nav-link" href="{{ url_for('views.home') }}">Home</a>
-                    <a class="nav-link" href="{{ url_for('views.events') }}">Events</a>
-                    <a class="nav-link" href="{{ url_for('views.about') }}">About</a>
-                    <a class="nav-link" href="{{ url_for('views.contact') }}">Kontakt</a>
-                    <a href="{{ url_for('views.booking') }}" class="btn btn-primary">Buchen</a>                    
-                </div>
-            </div>
-        </nav>
+          <!-- Navigation Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"></ul>
+            <a class="nav-link" href="{{ url_for('views.home') }}">Home</a>
+            <a class="nav-link" href="{{ url_for('views.events') }}"
+              >Referenzen</a
+            >
+            <a class="nav-link" href="{{ url_for('views.about') }}">About</a>
+            <a class="nav-link" href="{{ url_for('views.contact') }}"
+              >Kontakt</a
+            >
+            <a href="{{ url_for('views.booking') }}" class="btn btn-primary"
+              >Buchen</a
+            >
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Home Section -->
     <section id="home" class="section">
-        <div class="container hero-content">
-            <h1 class="display-4 hero-title cinzel-header">RayKen Events</h1>
-            <p class="lead hero-subtitle">DJs in der ganzen Schweiz. Erleben Sie unvergessliche Events mit unseren DJs: Von Hochzeiten über Clubnächte bis zu stilvollen Firmenfeiern – wir bringen den Sound, der Ihr Event in der ganzen Schweiz einzigartig macht!</p>
-            <a href="/booking" class="btn hero-btn">Jetzt Buchen!</a>
-        </div>
+      <div class="container hero-content">
+        <h1 class="display-4 hero-title cinzel-header">RayKen Events</h1>
+        <p class="lead hero-subtitle">
+          DJs in der ganzen Schweiz. Erleben Sie unvergessliche Events mit
+          unseren DJs: Von Hochzeiten über Clubnächte bis zu stilvollen
+          Firmenfeiern – wir bringen den Sound, der Ihr Event in der ganzen
+          Schweiz einzigartig macht!
+        </p>
+        <a href="/booking" class="btn hero-btn">Jetzt Buchen!</a>
+      </div>
     </section>
 
     <section id="about" class="section bg-light text-center py-5">
-        <div class="container">
-            <h2 class="about-title">About DJ Afrit</h2>
-            <p class="about-description">I'm DJ Afrit, a passionate DJ with over 10 years of experience, offering electrifying beats for every occasion. Explore my exclusive DJ products designed to elevate your event.</p>
-        </div>
-    </section>
- 
-    
-    <!-- DJ Products Section -->
-    <section id="products" class="section py-5">
-        <div class="container">
-            <h3 class="text-center">Exclusive DJ Products</h3>
-            <div class="row">
-                <!-- Product 1 -->
-                <div class="col-md-4 product-item">
-                    <div class="product-card">
-                        <img src="dj-equipment-1.jpg" class="img-fluid" alt="DJ Mixer">
-                        <h4 class="product-title">Professional DJ Mixer</h4>
-                        <p class="product-price">$499.99</p>
-                        <button class="btn btn-primary details-btn">View Details</button>
-                        <div class="product-details">
-                            <p>This top-of-the-line DJ mixer offers everything you need for a flawless performance. With a 4-channel setup and customizable effects, it's perfect for both beginners and seasoned DJs.</p>
-                        </div>
-                        <a href="/booking" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-    
-                <!-- Product 2 -->
-                <div class="col-md-4 product-item">
-                    <div class="product-card">
-                        <img src="dj-equipment-2.jpg" class="img-fluid" alt="DJ Headphones">
-                        <h4 class="product-title">Noise-Cancelling DJ Headphones</h4>
-                        <p class="product-price">$199.99</p>
-                        <button class="btn btn-primary details-btn">View Details</button>
-                        <div class="product-details">
-                            <p>Experience crystal-clear sound and total focus with these noise-cancelling headphones. Perfect for live performances and studio sessions.</p>
-                        </div>
-                        <a href="/booking" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-    
-                <!-- Product 3 -->
-                <div class="col-md-4 product-item">
-                    <div class="product-card">
-                        <img src="dj-equipment-3.jpg" class="img-fluid" alt="DJ Turntables">
-                        <h4 class="product-title">High-End DJ Turntables</h4>
-                        <p class="product-price">$799.99</p>
-                        <button class="btn btn-primary details-btn">View Details</button>
-                        <div class="product-details">
-                            <p>Take your DJing to the next level with these high-end turntables. With unparalleled precision and durability, they're the perfect addition to any DJ setup.</p>
-                        </div>
-                        <a href="/booking" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="container">
+        <h2 class="about-title">About DJ Afrit</h2>
+        <p class="about-description">
+          I'm DJ Afrit, a passionate DJ with over 10 years of experience,
+          offering electrifying beats for every occasion. Explore my exclusive
+          DJ products designed to elevate your event.
+        </p>
+      </div>
     </section>
 
-    <!-- Events Section -->
-    <section id="events" class="section bg-dark text-white py-5">
-        <div class="container">
-            <h2>Upcoming Events</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="event-card p-3 mb-4 bg-secondary">
-                        <h4>Event Name 1</h4>
-                        <p>Date: 12th Dec 2024</p>
-                        <p>Location: Club XYZ</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="event-card p-3 mb-4 bg-secondary">
-                        <h4>Event Name 2</h4>
-                        <p>Date: 25th Dec 2024</p>
-                        <p>Location: Festival ABC</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="event-card p-3 mb-4 bg-secondary">
-                        <h4>Event Name 3</h4>
-                        <p>Date: 31st Dec 2024</p>
-                        <p>Location: Club 123</p>
-                    </div>
-                </div>
+    <!-- DJ Products Section -->
+    <section id="products" class="section py-5">
+      <div class="container">
+        <h3 class="text-center">Exclusive DJ Products</h3>
+        <div class="row">
+          <!-- Product 1 -->
+          <div class="col-md-4 product-item">
+            <div class="product-card">
+              <img src="dj-equipment-1.jpg" class="img-fluid" alt="DJ Mixer" />
+              <h4 class="product-title">Professional DJ Mixer</h4>
+              <p class="product-price">$499.99</p>
+              <button class="btn btn-primary details-btn">View Details</button>
+              <div class="product-details">
+                <p>
+                  This top-of-the-line DJ mixer offers everything you need for a
+                  flawless performance. With a 4-channel setup and customizable
+                  effects, it's perfect for both beginners and seasoned DJs.
+                </p>
+              </div>
+              <a href="/booking" class="btn btn-primary">Book Now</a>
             </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-md-4 product-item">
+            <div class="product-card">
+              <img
+                src="dj-equipment-2.jpg"
+                class="img-fluid"
+                alt="DJ Headphones"
+              />
+              <h4 class="product-title">Noise-Cancelling DJ Headphones</h4>
+              <p class="product-price">$199.99</p>
+              <button class="btn btn-primary details-btn">View Details</button>
+              <div class="product-details">
+                <p>
+                  Experience crystal-clear sound and total focus with these
+                  noise-cancelling headphones. Perfect for live performances and
+                  studio sessions.
+                </p>
+              </div>
+              <a href="/booking" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-md-4 product-item">
+            <div class="product-card">
+              <img
+                src="dj-equipment-3.jpg"
+                class="img-fluid"
+                alt="DJ Turntables"
+              />
+              <h4 class="product-title">High-End DJ Turntables</h4>
+              <p class="product-price">$799.99</p>
+              <button class="btn btn-primary details-btn">View Details</button>
+              <div class="product-details">
+                <p>
+                  Take your DJing to the next level with these high-end
+                  turntables. With unparalleled precision and durability,
+                  they're the perfect addition to any DJ setup.
+                </p>
+              </div>
+              <a href="/booking" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section id="events" class="section bg-dark text-white py-5">
+      <div class="container">
+        <h2>Kommende Veranstaltungen bei mySenses</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div
+              class="event-card p-3 mb-4"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)
+                  ),
+                  url('https://instagram.fzrh5-1.fna.fbcdn.net/v/t39.30808-6/468965641_18342365479182948_9038912856070001121_n.jpg?stp=dst-jpg_e35_p1080x1080_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fzrh5-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=u0aU0Bt0au4Q7kNvgH9Q8Sk&_nc_gid=0ecb636add3e44debb10547f315ef249&edm=AP4sbd4AAAAA&ccb=7-5&ig_cache_key=MzIyNTgxMjIwODQzOTU0ODQ0Nw%3D%3D.3-ccb7-5&oh=00_AYA8EZiqz5ySibqhxKV6XDRVuSaTpceu3uZPdjmcAeBXGA&oe=6792F25A&_nc_sid=7a9f4b');
+                background-size: cover;
+                background-position: bottom;
+                color: white;
+                padding: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+              "
+            >
+              <h4>mySenses</h4>
+              <p>25. Januar 2025</p>
+              <p>20:00 - 1:00 Uhr</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="event-card p-3 mb-4"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)
+                  ),
+                  url('https://instagram.fzrh5-1.fna.fbcdn.net/v/t39.30808-6/468965641_18342365479182948_9038912856070001121_n.jpg?stp=dst-jpg_e35_p1080x1080_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fzrh5-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=u0aU0Bt0au4Q7kNvgH9Q8Sk&_nc_gid=0ecb636add3e44debb10547f315ef249&edm=AP4sbd4AAAAA&ccb=7-5&ig_cache_key=MzIyNTgxMjIwODQzOTU0ODQ0Nw%3D%3D.3-ccb7-5&oh=00_AYA8EZiqz5ySibqhxKV6XDRVuSaTpceu3uZPdjmcAeBXGA&oe=6792F25A&_nc_sid=7a9f4b');
+                background-size: cover;
+                background-position: bottom;
+                color: white;
+                padding: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+              "
+            >
+              <h4>mySenses</h4>
+              <p>1. Februar 2025</p>
+              <p>20:00 - 1:00 Uhr</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="event-card p-3 mb-4"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)
+                  ),
+                  url('https://instagram.fzrh5-1.fna.fbcdn.net/v/t39.30808-6/468965641_18342365479182948_9038912856070001121_n.jpg?stp=dst-jpg_e35_p1080x1080_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fzrh5-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=u0aU0Bt0au4Q7kNvgH9Q8Sk&_nc_gid=0ecb636add3e44debb10547f315ef249&edm=AP4sbd4AAAAA&ccb=7-5&ig_cache_key=MzIyNTgxMjIwODQzOTU0ODQ0Nw%3D%3D.3-ccb7-5&oh=00_AYA8EZiqz5ySibqhxKV6XDRVuSaTpceu3uZPdjmcAeBXGA&oe=6792F25A&_nc_sid=7a9f4b');
+                background-size: cover;
+                background-position: bottom;
+                color: white;
+                padding: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+              "
+            >
+              <h4>mySenses</h4>
+              <p>8. Februar 2025</p>
+              <p>20:00 - 1:00 Uhr</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 DJ Afrit. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-white mx-2"><i class="fab fa-soundcloud"></i></a>
-        </div>
+      <p>&copy; 2025 DJ Afrit. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" class="text-white mx-2"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white mx-2"
+          ><i class="fab fa-soundcloud"></i
+        ></a>
+      </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='script.js') }}" async defer></script>
-</body>
-
+    <script
+      src="{{ url_for('static', filename='script.js') }}"
+      async
+      defer
+    ></script>
+  </body>
 </html>
