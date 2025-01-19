@@ -22,6 +22,10 @@
 
     <!-- Responsive style -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -30,7 +34,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <!-- Logo -->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ url_for('views.home') }}">
                     <img src="{{ url_for('static', filename='content/LOGO.png') }}" alt="DJ Afrit Logo">
                 </a>
 
@@ -47,7 +51,7 @@
                     <a class="nav-link" href="{{ url_for('views.events') }}">Events</a>
                     <a class="nav-link" href="{{ url_for('views.about') }}">About</a>
                     <a class="nav-link" href="{{ url_for('views.contact') }}">Kontakt</a>
-                    <a href="{{ url_for('views.booking') }}" class="btn btn-primary">Buchen!</a>                    
+                    <a href="{{ url_for('views.booking') }}" class="btn btn-primary">Buchen</a>                    
                 </div>
             </div>
         </nav>
@@ -56,17 +60,67 @@
     <!-- Home Section -->
     <section id="home" class="section">
         <div class="container hero-content">
-            <h1 class="display-4 hero-title">RayKen Events</h1>
+            <h1 class="display-4 hero-title cinzel-header">RayKen Events</h1>
             <p class="lead hero-subtitle">DJs in der ganzen Schweiz. Erleben Sie unvergessliche Events mit unseren DJs: Von Hochzeiten über Clubnächte bis zu stilvollen Firmenfeiern – wir bringen den Sound, der Ihr Event in der ganzen Schweiz einzigartig macht!</p>
             <a href="/booking" class="btn hero-btn">Jetzt Buchen!</a>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section bg-light text-center py-5">
         <div class="container">
-            <h2>About Me</h2>
-            <p>I'm DJ Afrit, a passionate DJ with over 10 years of experience in making the crowd dance to electrifying beats.</p>
+            <h2 class="about-title">About DJ Afrit</h2>
+            <p class="about-description">I'm DJ Afrit, a passionate DJ with over 10 years of experience, offering electrifying beats for every occasion. Explore my exclusive DJ products designed to elevate your event.</p>
+        </div>
+    </section>
+ 
+    
+    <!-- DJ Products Section -->
+    <section id="products" class="section py-5">
+        <div class="container">
+            <h3 class="text-center">Exclusive DJ Products</h3>
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4 product-item">
+                    <div class="product-card">
+                        <img src="dj-equipment-1.jpg" class="img-fluid" alt="DJ Mixer">
+                        <h4 class="product-title">Professional DJ Mixer</h4>
+                        <p class="product-price">$499.99</p>
+                        <button class="btn btn-primary details-btn">View Details</button>
+                        <div class="product-details">
+                            <p>This top-of-the-line DJ mixer offers everything you need for a flawless performance. With a 4-channel setup and customizable effects, it's perfect for both beginners and seasoned DJs.</p>
+                        </div>
+                        <a href="/booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+    
+                <!-- Product 2 -->
+                <div class="col-md-4 product-item">
+                    <div class="product-card">
+                        <img src="dj-equipment-2.jpg" class="img-fluid" alt="DJ Headphones">
+                        <h4 class="product-title">Noise-Cancelling DJ Headphones</h4>
+                        <p class="product-price">$199.99</p>
+                        <button class="btn btn-primary details-btn">View Details</button>
+                        <div class="product-details">
+                            <p>Experience crystal-clear sound and total focus with these noise-cancelling headphones. Perfect for live performances and studio sessions.</p>
+                        </div>
+                        <a href="/booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+    
+                <!-- Product 3 -->
+                <div class="col-md-4 product-item">
+                    <div class="product-card">
+                        <img src="dj-equipment-3.jpg" class="img-fluid" alt="DJ Turntables">
+                        <h4 class="product-title">High-End DJ Turntables</h4>
+                        <p class="product-price">$799.99</p>
+                        <button class="btn btn-primary details-btn">View Details</button>
+                        <div class="product-details">
+                            <p>Take your DJing to the next level with these high-end turntables. With unparalleled precision and durability, they're the perfect addition to any DJ setup.</p>
+                        </div>
+                        <a href="/booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -102,7 +156,7 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 DJ Afrit. All rights reserved.</p>
+        <p>&copy; 2025 DJ Afrit. All rights reserved.</p>
         <div class="social-icons">
             <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>

@@ -7,9 +7,36 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #000; /* Schwarzer Hintergrund */
-    color: #FFFBFC; /* Helles Weiß für Text */
+    background-color: #000000; /* Schwarzer Hintergrund */
+    color: #FFFBFC; /* Weiß für Text */
 }
+
+/* Fonts Styling */
+@font-face {
+    font-family: 'PorschaC';
+    src: url('/static/fonts/webfonts_PorschaC/PorschaC.woff') format('woff'),
+         url('/static/fonts/webfonts_PorschaC/PorschaC.ttf') format('truetype'),
+         url('/static/fonts/webfonts_PorschaC/PorschaC.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('/static/fonts/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.cinzel-header {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 600; /* Adjust the weight as needed */
+    font-style: normal;
+  }
+  
+
 
 /* Navbar Styling */
 .navbar {
@@ -35,7 +62,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #007bff; /* Blau beim Hover */
+    color: #D6BA3B; /* Blau beim Hover */
 }
 
 .nav-item .dropdown-menu {
@@ -47,6 +74,7 @@ body {
 /* Kontakt Button Styling */
 .btn-primary {
     background-color: #C9C0C0; /* grau */
+    color: rgba(0, 0, 0, 0.785);
     border: none;
     padding: 10px 16px;
     font-weight: bold;
@@ -60,7 +88,7 @@ body {
 
 /* Hero Section */
 #home {
-    background: url('https://static.vecteezy.com/system/resources/thumbnails/042/660/319/small_2x/ai-generated-pic-city-park-bench-offers-a-peaceful-oasis-amidst-urban-hustle-photo.jpg') no-repeat center center/cover;
+    background: url('https://images.pexels.com/photos/29263194/pexels-photo-29263194/free-photo-of-dj-mixing-at-night-party-in-mexico-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
     height: 100vh;
 }
 
@@ -68,54 +96,144 @@ body {
     text-align: center;
     backdrop-filter: blur(10px);
     padding: 30px;
-    background: rgba(34, 56, 78, 0.8); /* Dunkles Blau mit Transparenz */
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/011/887/512/small/halftone-dotted-background-free-png.png');
+    background-blend-mode: overlay;
 }
 
 .hero-content h1 {
-    color: #D6BA3B; /* Gold für Überschriften */
+    color: #FFFFFF;
     font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+    font-family: 'PorschaC', 'Cinzel', Arial, Helvetica, sans-serif;
+
 }
 
+
 .hero-content p {
-    color: #C9C0C0; /* Zartes Grau für Untertitel */
+    color: #C9C0C0;
 }
 
 .hero-btn {
     margin-top: 20px;
     padding: 12px 30px;
-    background: linear-gradient(135deg, #22384E, #D6BA3B);
+    background-color: #22384E;
     border: none;
     color: #FFFBFC;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     cursor: pointer;
+    will-change: transform, box-shadow;
+    backface-visibility: hidden;
 }
 
 .hero-btn:hover {
+    background-color: #D6BA3B; /* Lighter shade for contrast */
     transform: translateY(-5px);
-    box-shadow: 0 0 15px #D6BA3B;
+    box-shadow: 0 0 15px rgba(214, 186, 59, 0.8);
+}
+
+.hero-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 10px #D6BA3B;
+}
+
+.hero-btn:focus {
+    outline: 2px solid #D6BA3B;
+    outline-offset: 3px;
+}
+
+/* Leistungen */
+#about {
+    padding: 60px 0;
+}
+
+.about-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 15px 0;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff5733;
+}
+
+.product-details {
+    display: none;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.product-details.visible {
+    display: block;
+}
+
+
+
+.product-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.product-item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer */
 footer {
     padding: 20px;
-    background: #000;
+    background: #22384E; /* Dunkles Blau */
     text-align: center;
 }
 
 footer p {
-    color: #FFFBFC;
+    color: #FFFBFC; /* Weißer Text */
 }
 
 .social-icons a {
     font-size: 1.5rem;
-    color: #FFFBFC;
+    color: #FFFBFC; /* Weiß */
     transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #D6BA3B;
+    color: #D6BA3B; /* Gold beim Hover */
 }
